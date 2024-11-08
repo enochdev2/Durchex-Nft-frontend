@@ -90,3 +90,7 @@ EnochTrade is a decentralized NFT marketplace that empowers creators and collect
 ## Documentation:
 
 For detailed information on the project, refer to the [Documentation](link-to-docs).
+
+
+<!-- "flowbite": "^2.2.1", -->
+    <!-- "flowbite-react": "^0.7.2", -->

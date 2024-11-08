@@ -70,10 +70,10 @@ function Section_5() {
                     </span>
                     <p className="text-white/50 text-sm">
                       {item
-                        ? `${item.userEthAddress.slice(
+                        ? `${item.userEthAddress?.slice(
                             0,
                             4
-                          )}...${item.userEthAddress.slice(39)}`
+                          )}...${item.userEthAddress?.slice(39)}`
                         : null}
                     </p>
                   </div>

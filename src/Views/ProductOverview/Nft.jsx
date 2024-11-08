@@ -12,7 +12,6 @@ import NftPlaceholder from "../../assets/images/nft_placeholder.svg";
 import { ProductNFT } from "../../components/UiComponents/ProductNFT";
 import NftDetail from "./components/NftDetail";
 import NftActivity from "./components/NftActivity";
-import NftChart from "./components/NftChart";
 import NftListing from "./components/NftListing";
 import NftBuy from "./components/NftBuy";
 import NftBid from "./components/NftBId";
@@ -43,22 +42,6 @@ function Nft() {
 
   const [ComponentLoad, setComponentLoad] = useState(0);
 
-  const NftComponents = {
-    details: (
-      <NftDetail
-        data={{
-          TokenId: id,
-          Description: NFTsItems.Description,
-          CreateAt: NFTsItems.CreateAt,
-          creatorFees: NFTsItems.creatorFees,
-          category: NFTsItems.Category,
-        }}
-      />
-    ),
-    chart: <NftChart NFTid={id} />,
-    listing: <NftListing />,
-    activity: <NftActivity id={id} />,
-  };
 
   useEffect(() => {
     const fetching = async () => {
@@ -392,11 +375,7 @@ function Nft() {
               </li>
             </ul>
             <div className="border-l-[2px] h-[25pc] overflow-x-auto items-center border-r-[1px] border-b-[2px] border-darkBlue-600 flex flex-col gap-4 p-4">
-              {NftComponents[paramState.get("info")] ? (
-                NftComponents[paramState.get("info")]
-              ) : (
-                <p className="text-white/80">url problem</p>
-              )}
+          
             </div>
           </div>
         </div>
